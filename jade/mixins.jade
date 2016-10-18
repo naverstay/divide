@@ -1,0 +1,307 @@
+mixin dev_head(page_title, divide_page, how_page, partners_page, create_page)
+    head
+        title=page_title
+        | <!-- saved from url=(0014)about:internet -->
+        meta(charset='utf-8')
+        meta(name='viewport', content="width=device-width, initial-scale=1.0")
+        meta(name="SKYPE_TOOLBAR", content="SKYPE_TOOLBAR_PARSER_COMPATIBLE")
+        meta(name="apple-mobile-web-app-capable", content="yes")
+        meta(name="format-detection", content="telephone=no")
+        - if (how_page || partners_page)
+            link(rel='stylesheet', href='styles/jquery.fullpage.css', media='all')
+        link(rel='stylesheet', href='styles/main_global.css', media='all')
+        //-| 
+        //-| <!--[if gte IE 8]>
+        //-| <link rel="stylesheet" type="text/css" href="styles/all-ie-only.css" />
+        //-| <![endif]-->
+        //-| 
+        //-script(src='js/retina.js')
+        script(src='js/jquery1.10.js')
+        - if (divide_page)
+            script(src='js/jquery-ui.js')
+            script(src='js/jquery.matchHeight.js')
+            script(src='js/swiper.js')
+            script(src='js/divide_page.js')
+        - if (how_page)
+            script(src='js/jquery.fullPage.js')
+            script(src='js/how_page.js')
+        - if (partners_page)
+            script(src='js/jquery.fullPage.js')
+            script(src='js/partners_page.js')
+        - if (create_page)
+            script(src='js/jquery-ui.js')
+            script(src='js/create_page.js')
+
+mixin loop_while(counter)
+    -i=0;
+    while i < counter
+        -i++;
+        block
+
+mixin popups()
+    #pr_rm_dialog.popup_form.popup_form_v1()
+        form(action='#')
+            .popup_form_caption Вы хотите удалить профиль 
+                span.color_red  Alex Flux
+                |?
+            .popup_controls
+                a.btn_v1.gray_btn.popup_btn(href='#'): span ДА
+                a.btn_v1.gray_btn.popup_btn(href='#'): span НЕТ, случайно нажал
+        
+            .popup_info
+                span.popup_info_icon !
+                .popup_info_tip удалить профиль можно, если у тебя нет активных сборов на подарки
+                
+                
+    #gift_info_dialog.popup_form.popup_form_v2()
+        form(action='#')
+            .popup_form_caption
+                .caption_like_block
+                    a.gift_like_link(href='#')
+                .popup_caption Подарок на  
+                    span.color_red  День Рождения 
+                    | для 
+                    span.color_red  Alex Flux
+                    .caption_presenter_photo: img(src='i/presenter_2.png')
+            .gift_popup_name
+                span Робот BB-8
+                    
+            .gift_popup_block
+                .gift_popup_photo
+                    img(src='i/popup_gift.jpg')
+                    
+                dl.gift_popup_info
+                    dt: p ссылка:
+                    dd: p http://www.divide.gift/345467
+                    
+                    dt
+                        p 3 888 ₴
+                        .gift_progress_val_holder
+                            .gift_progress_w
+                                .gift_progress_line(style='width: 90%;')
+                            .gift_progress_percent 90%
+                    dd: p собрано из:
+                    
+                    dt: p 4 320 ₴
+                    dd.hide
+                    
+                    dt: p 18
+                    dd: p дней осталось до окончания
+                    
+                    dt: p Рассказать друзьям:
+                    dd
+                        .add_fav_gift
+                            .f_sh_block.no_friends_mod
+                                li: a.sh_lnk.icon-facebook(href='#') 
+                                li: a.sh_lnk.icon-vk(href='#') 
+                                li: a.sh_lnk.icon-twitter(href='#') 
+                                li: a.sh_lnk.icon-google-plus(href='#') 
+                                li: a.sh_lnk.icon-at(href='#')
+                            a.add_to_my_gift(href='#')
+                                .add_to_my_gift_icon: img(src='i/fav_gift_icon.png')
+                                span тоже хочу это <br> в подарок
+
+            .popup_title_edge
+                a.popup_title(href='#')
+                    .popup_title_img: img(src='i/popup_title_icon.png')
+                    span ПОЗДРАВИТЬ
+                                
+            .congratulations_block
+                .congratulation_text
+                    p Привет ребятки, у меня скоро Днюха и как вы знаете я фанат Star Wars, я очень сильно хочу в подарок милого дроида BB-8! Я облегчу ваши метания, любая сумма приблизит к реализации моего желаемого подарка! Спасибо всем! ;)
+                    
+                .congratulators_block
+                    .congratulators_caption
+                        span.color_red УЖЕ ПОЗДРАВИЛИ  
+                        | 55  
+                        span.color_red  ДРУЗЕЙ
+                    ul.congratulators_list
+                        +loop_while(5)
+                            li
+                                .congratulator_unit
+                                    .congratulator_photo: img(src='i/congratulator_1.png')
+                                    .congratulator_name Алина Никина
+                                    .congratulator_val 150 ₴
+                                    
+                    .text_center
+                        a.load_more(href='#')
+
+                
+    #gift_info_dialog2.popup_form.popup_form_v2()
+        form(action='#')
+            .popup_form_caption
+                .caption_like_block
+                    a.gift_like_link(href='#')
+                .popup_caption Подарок на  
+                    span.color_red  День Рождения 
+                    | для 
+                    span.color_red  Alex Flux
+                    .caption_presenter_photo: img(src='i/presenter_2.png')
+            .gift_popup_name
+                span Робот BB-8
+                    
+            .gift_popup_block
+                .gift_popup_photo
+                    img(src='i/popup_gift.jpg')
+                    
+                dl.gift_popup_info
+                    dt: p ссылка:
+                    dd: p http://www.divide.gift/345467
+                    
+                    dt
+                        p 3 888 ₴
+                        .gift_progress_val_holder
+                            .gift_progress_w
+                                .gift_progress_line(style='width: 90%;')
+                            .gift_progress_percent 90%
+                    dd: p собрано из:
+                    
+                    dt: p 4 320 ₴
+                    dd.hide
+                    
+                    dt
+                        p 
+                            span 18
+                            span.popup_gift_thx: span +7 дней
+                    dd: p дней осталось до окончания
+                    
+                    dt: p Рассказать друзьям:
+                    dd
+                        .add_fav_gift
+                            .f_sh_block.no_friends_mod
+                                li: a.sh_lnk.icon-facebook(href='#') 
+                                li: a.sh_lnk.icon-vk(href='#') 
+                                li: a.sh_lnk.icon-twitter(href='#') 
+                                li: a.sh_lnk.icon-google-plus(href='#') 
+                                li: a.sh_lnk.icon-at(href='#')
+
+            .popup_title_edge.gray_mod
+                a.popup_title(href='#')
+                    span 18 дней 17 ч 35 м
+                                
+            .congratulations_block
+                .congratulation_text
+                    p Привет ребятки, у меня скоро Днюха и как вы знаете я фанат Star Wars, я очень сильно хочу в подарок милого дроида BB-8! Я облегчу ваши метания, любая сумма приблизит к реализации моего желаемого подарка! Спасибо всем! ;)
+                    
+                .congratulators_block
+                    .congratulators_caption
+                        span.color_red УЖЕ ПОЗДРАВИЛИ  
+                        | 55  
+                        span.color_red  ДРУЗЕЙ
+                    ul.congratulators_list
+                        +loop_while(3)
+                            li
+                                .congratulator_unit
+                                    .congratulator_photo: img(src='i/congratulator_1.png')
+                                    .congratulator_name Алина Никина
+                                    .congratulator_val
+                                        span 150 ₴
+                                        a.popup_gift_thx(href='#'): span спасибо
+                        +loop_while(2)
+                            li
+                                .congratulator_unit
+                                    .congratulator_photo: img(src='i/congratulator_1.png')
+                                    .congratulator_name Алина Никина
+                                    .congratulator_val
+                                        span 150 ₴
+                                        a.popup_gift_thx.active(href='#'): span спасибо
+                                    
+                    .text_center
+                        a.load_more(href='#')
+                                        
+    #new_gift_dialog.popup_form.popup_form_v2()
+        form(action='#')
+            .popup_form_caption
+                .popup_caption Подарок на  
+                    span.color_red  День Рождения 
+                    | для 
+                    span.color_red  Alex Flux
+                    .caption_presenter_photo: img(src='i/presenter_2.png')
+            .gift_popup_name
+                span Робот BB-8
+                    
+            .gift_popup_block
+                .gift_popup_photo
+                    img(src='i/popup_gift.jpg')
+                    
+                .popup_gift_sender_info
+                    .form_cell
+                        label.f_label_v2(for='gift_sum') Сумма:
+                        .input_group
+                            .input_w.w_580
+                                input#gift_sum.f_input_v3(value='00.00')
+                            .input_w: .f_input_tip.large_tip ₴
+                    .form_cell
+                        label.f_label_v2(for='gift_sum') Авторизироваться или войти:
+                        .add_fav_gift
+                            .f_sh_block.no_friends_mod
+                                li: a.sh_lnk.icon-facebook(href='#') 
+                                li: a.sh_lnk.icon-vk(href='#') 
+                                li: a.sh_lnk.icon-twitter(href='#') 
+                                li: a.sh_lnk.icon-google-plus(href='#') 
+                                li: a.sh_lnk.icon-at(href='#')
+                    .form_row
+                        .form_cell
+                            label.f_label_v2(for='gift_sender_name') Имя:
+                            .input_w
+                                input#gift_sender_name.f_input_v3(value='')
+                        .form_cell
+                            label.f_label_v2(for='gift_sender_last_name') Фамилия:
+                            .input_w
+                                input#gift_sender_last_name.f_input_v3(value='')
+
+            .popup_title_edge
+                a.popup_title(href='#')
+                    .popup_title_img: img(src='i/popup_title_icon.png')
+                    span ОТПРАВИТЬ
+                                
+            .congratulations_block
+                .congratulation_text
+                    p Привет ребятки, у меня скоро Днюха и как вы знаете я фанат Star Wars, я очень сильно хочу в подарок милого дроида BB-8! Я облегчу ваши метания, любая сумма приблизит к реализации моего желаемого подарка! Спасибо всем! ;)
+                    
+                .congratulators_block
+                    .gift_progress_val_holder
+                        .gift_progress_got 3 888 ₴ 
+                        .gift_progress_tip собрано из: 
+                        .gift_progress_total 4 320 ₴ 
+                        
+                        .gift_progress_w
+                            .gift_progress_line(style='width: 90%;')
+                        .gift_progress_percent 90%
+                        
+
+mixin gift_unit(other_gift, cls)
+    .gift_unit(class=cls)
+        .gift_img
+            - if (other_gift)
+                a.other_gift_link.openGiftInfo(href='#')
+                    img(src='i/gift_1.jpg')
+            - else
+                a.other_gift_link.openGiftInfo2(href='#')
+                    img(src='i/gift_1.jpg')
+            .gift_name: span Робот BB-8 от Sphero
+            - if (other_gift)
+                .gift_like_block
+                    a.gift_like_link(href='#')
+        .gift_presenter
+            .gift_presenter_name Jessica Alba
+            .gift_presenter_photo: img(src='i/presenter_1.png')
+        .gift_info
+            p Привет ребятки, у меня скоро Днюха и как вы знаете я фанат Star Wars, я очень сильно хочу в подарок милого дроида BB-8
+
+            .gift_progress_holder
+                .gift_progress_w
+                    .gift_progress_line(style='width: 100%;')
+
+            .gift_progress_table
+                .gift_progress_cell
+                    .gift_progress_val 110%
+                .gift_progress_cell
+                    .gift_progress_val 4,800 ₴ 
+                    p cумма
+                .gift_progress_cell
+                    .gift_progress_val 55
+                    p поздравивших
+                .gift_progress_cell
+                    .gift_progress_val 18
+                    p дней осталось

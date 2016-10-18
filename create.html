@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Divide создать</title><!-- saved from url=(0014)about:internet -->
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="SKYPE_TOOLBAR" content="SKYPE_TOOLBAR_PARSER_COMPATIBLE"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <link rel="stylesheet" href="styles/main_global.css" media="all"/>
+    <script src="js/jquery1.10.js"></script>
+    <script src="js/jquery-ui.js"></script>
+    <script src="js/create_page.js"></script>
+  </head>
+  <body class="create_page">
+    <div class="wrapper">
+      <div class="rect_1024"></div>
+      <div class="base">
+        <div class="header">
+          <div class="section_inner clearfix">
+            <ul class="main_menu">
+              <li class="menu_item"><a href="index.html" class="menu_link"><span class="link_text">Как это работает?</span></a></li>
+              <li class="menu_item"><a href="partners.html" class="menu_link"><span class="link_text">Партнерам</span></a></li>
+              <li class="menu_item"><a href="friends.html" class="menu_link"><span class="link_text">Друзья Divide</span></a></li>
+              <li class="menu_item menu_item_logo"><a href="#" class="logo"><img src="i/logo.png"></a></li>
+              <li class="menu_item menu_item_right"><a href="create.html" class="menu_link active wish_create_link"><span class="wish_l_icon"><img src="i/wish_link.png"></span><span class="link_text">Создать желание</span></a></li>
+              <li class="menu_item menu_item_right"><a href="divide.html" class="menu_link"><span class="link_text profile_icon">Вход DIVIDE</span></a></li>
+            </ul>
+            <div class="lang_block">
+              <div class="lang_switcher"><a href="#" class="lang_link"><img src="i/flag_ukr.png"></a>
+                <ul class="lang_list">
+                  <li><a href="#" class="lang_link"><img src="i/flag_ukr.png"></a></li>
+                  <li><a href="#" class="lang_link"><img src="i/flag_ukr.png"></a></li>
+                  <li><a href="#" class="lang_link"><img src="i/flag_ukr.png"></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="create_form_holder">
+          <div class="section create_controls_holder">
+            <div class="section_inner">
+              <div class="section_table">
+                <div class="form_block">
+                  <form action="#">
+                    <div data-tab-context="#create_tab_list" class="tabBlock">
+                      <div id="create_tab_1">
+                        <div class="tab_unit">
+                          <ul class="create_toggle_holder">
+                            <li>
+                              <label class="create_check">
+                                <input type="radio" name="create_for" checked class="hidden_inp"><span class="check_text">ДЛЯ МЕНЯ</span>
+                              </label>
+                            </li>
+                            <li>
+                              <label class="create_check">
+                                <input type="radio" name="create_for" class="hidden_inp"><span class="check_text">ДЛЯ ДРУГА</span>
+                              </label>
+                            </li>
+                          </ul>
+                          <div class="create_form_cell">
+                            <label for="create_event">По какому случаю?</label>
+                            <div class="input_w">
+                              <input id="create_event" class="f_input_v4">
+                            </div>
+                          </div>
+                          <div class="create_form_cell">
+                            <label for="present_name">Введите название подарка или вставьте ссылку</label>
+                            <div class="input_w">
+                              <input id="present_name" class="f_input_v4">
+                            </div>
+                          </div>
+                          <div class="create_form_cell_v2">
+                            <label for="present_price">Цена</label>
+                            <div class="input_w">
+                              <input id="present_price" class="f_input_v4">
+                            </div><span>₴</span>
+                          </div>
+                          <div class="create_form_cell_v3">
+                            <label class="input_w calendar_holder">
+                              <input id="create_event_date" placeholder="Дата события" class="f_input_v5">
+                            </label>
+                          </div>
+                        </div>
+                      </div>
+                      <div id="create_tab_2">
+                        <div class="tab_unit">
+                          <div class="create_event_info">
+                            <div class="create_form_cell">
+                              <label for="create_event_photos">Добавьте фотографии вашего желания:</label>
+                              <div class="input_w photos_catcher">
+                                <textarea id="create_event_photos" class="f_ta_v1"></textarea>
+                              </div>
+                            </div>
+                            <div class="create_form_cell">
+                              <label for="create_event_description">Добавьте описание:</label>
+                              <div class="input_w">
+                                <textarea id="create_event_description" class="f_ta_v2"></textarea>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div id="create_tab_3">
+                        <div class="tab_unit"> 
+                          <div class="create_title">РАССКАЖИ ДРУЗЬЯМ!</div>
+                          <div class="create_sh_block">
+                            <ul class="f_sh_block">
+                              <li><a href="#" class="sh_lnk icon-facebook"></a></li>
+                              <li><a href="#" class="sh_lnk icon-vk"></a></li>
+                              <li><a href="#" class="sh_lnk icon-twitter"></a></li>
+                              <li><a href="#" class="sh_lnk icon-google-plus"></a></li>
+                            </ul>
+                          </div>
+                          <div class="create_tip">
+                            <p>Если ты ранее не был зарегистрирован в DIVIDE, мы автоматически создадим тебе аккаунт!</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+            <div data-step='0' class="create_controls createControls">
+              <div class="create_steps_holder">
+                <ul class="create_nav">
+                  <li><a href="#" class="create_nav_btn nav_btn_prev createTabPrev"></a></li>
+                  <li><a href="#" class="create_nav_btn nav_btn_next createTabNext"></a></li>
+                  <li><a href="#" class="create_nav_btn nav_btn_view"></a></li>
+                </ul>
+                <ul id="create_tab_list" class="create_steps">
+                  <li><a href="#create_tab_1" class="create_step_link"></a></li>
+                  <li><a href="#create_tab_2" class="create_step_link"></a></li>
+                  <li><a href="#create_tab_3" class="create_step_link"></a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="footer">
+        <div class="section_inner">
+          <div class="footer_table">
+            <div class="footer_cell"><a href="#" class="footer_link">Публичная оферта</a><a href="#" class="footer_link">FAQ</a></div>
+            <div class="footer_cell">
+              <ul class="f_sh_block">
+                <li><a href="#" class="sh_lnk icon-facebook"> </a></li>
+                <li><a href="#" class="sh_lnk icon-vk"> </a></li>
+                <li><a href="#" class="sh_lnk icon-twitter"> </a></li>
+                <li><a href="#" class="sh_lnk icon-google-plus"> </a></li>
+                <li><a href="#" class="sh_lnk icon-at"> </a></li>
+              </ul>
+              <div class="copyright">COPYRIGHT © 2016 Divide. ALL RIGHTS RESERVED</div>
+            </div>
+            <div class="footer_cell"><a href="#" class="footer_link">Язык: Русский</a></div>
+          </div>
+        </div>
+      </div>
+      <div class="decorations_block">
+        <div class="left_hill"><img src="i/hills_1.png"></div>
+        <div class="right_hill"><img src="i/hills_2.png"></div>
+      </div>
+    </div>
+    <!--+popups()-->
+  </body>
+</html>

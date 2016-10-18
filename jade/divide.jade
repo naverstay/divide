@@ -1,0 +1,216 @@
+include mixins
+doctype html
+html(lang='ru')
+    +dev_head('Divide divide', true)
+
+    body.profile_page
+        .wrapper
+            .rect_1024
+            .base
+                div.header
+                    .section_inner.clearfix    
+                        ul.main_menu
+                            li.menu_item
+                                a.menu_link(href='index.html')
+                                    span.link_text Как это работает?
+                            li.menu_item
+                                a.menu_link(href='partners.html')
+                                    span.link_text Партнерам
+                            li.menu_item
+                                a.menu_link(href='friends.html')
+                                    span.link_text Друзья Divide
+                            li.menu_item.menu_item_logo
+                                a.logo(href='#'): img(src='i/logo.png')
+                            li.menu_item.menu_item_right
+                                a.menu_link.wish_create_link(href='create.html')
+                                    span.wish_l_icon: img(src='i/wish_link.png')
+                                    span.link_text Создать желание
+                            li.menu_item.menu_item_right
+                                a.menu_link.active(href='divide.html')
+                                    span.link_text.profile_icon Вход DIVIDE
+    
+                        .lang_block: .lang_switcher
+                            a.lang_link(href='#'): img(src='i/flag_ukr.png')
+                            ul.lang_list
+                                +loop_while(3)
+                                    li: a.lang_link(href='#'): img(src='i/flag_ukr.png')
+                                
+                div.main_content: .section_inner.clearfix
+                    .profile_block
+                        .profile_controls
+                            .user_profile
+                                .user_avatar: img(src='i/user_1.png')
+                                .user_name: span Привет,  <br> Jessika Alba
+                            ul#profile_tab_list.tab_list
+                                li: a.tab_link(href='#profile_tab_1'): span мои подарки
+                                li: a.tab_link(href='#profile_tab_2'): span подарки друзей
+                                li: a.tab_link(href='#profile_tab_3'): span понравившиеся подарки
+                                li: a.tab_link(href='#profile_tab_4'): span настроить профиль
+                            
+                            a.profile_logout(href='#'): span ВЫЙТИ
+                                
+                        .profile_settings
+                            .tabBlock(data-tab-context='#profile_tab_list')
+                                #profile_tab_1.heightUnit: .tab_unit
+                                    .slider_holder.swiper_v1
+                                        .swiper-controls
+                                            #my_gift_next.swiper-button-next
+                                            #my_gift_prev.swiper-button-prev
+                                        .swiper-container.myGiftSlider
+                                            .swiper-wrapper.clearfix
+                                                +loop_while(2)
+                                                    .swiper-slide
+                                                        +gift_unit()
+                                                .swiper-slide
+                                                    a.gift_unit.openNewGift(href='#'): .add_gift_block
+                                                        .add_gift_img: img(src='i/add_gift_icon.png')
+                                                        .add_gift_caption ДОБАВЬ ЖЕЛАНИЕ
+
+                                                +loop_while(2)
+                                                    .swiper-slide
+                                                        +gift_unit()
+                                                                        
+                                #profile_tab_2.heightUnit: .tab_unit
+                                    .no_friends_msg
+                                        p Мы не нашли твоих друзей в DIVIDE, <br> но ты можешь их пригласить:
+                                        
+                                        ul.f_sh_block.no_friends_mod
+                                            li: a.sh_lnk.icon-facebook(href='#')
+                                            li: a.sh_lnk.icon-vk(href='#')
+                                            li: a.sh_lnk.icon-twitter(href='#')
+                                            li: a.sh_lnk.icon-google-plus(href='#')
+                                            li: a.sh_lnk.icon-at(href='#')
+                                #profile_tab_3.heightUnit: .tab_unit 
+                                    .slider_holder.swiper_v1
+                                        .swiper-controls
+                                            #my_fav_next.swiper-button-next
+                                            #my_fav_prev.swiper-button-prev
+                                        .swiper-container.myFavSlider
+                                            .swiper-wrapper.clearfix
+                                                +loop_while(5)
+                                                    .swiper-slide
+                                                        +gift_unit()
+                                                        
+                                #profile_tab_4.heightUnit: .tab_unit: form(action='#')
+                                    .profile_edit_block
+                                        .pr_edit_col.form_cell_v1.photo_mod
+                                            .pr_edit_photo
+                                                input#profile_avatar.hidden_inp(type='file')
+                                                label.pr_edit_link(for='profile_avatar')
+                                                img(src='i/profile_edit.png')
+                                            .form_cell
+                                                label.f_label_v1.edit_icon(for='profile_name') имя
+                                                .input_w: input#profile_name.f_input_v1(value='Jessika')
+
+                                            .form_cell
+                                                label.f_label_v1.edit_icon(for='profile_last_name') фамилия
+                                                .input_w: input#profile_last_name.f_input_v1(value='Alba')
+
+                                            .form_cell
+                                                label.f_label_v1.edit_icon(for='profile_birthday') дата рождения
+                                                .input_w: input#profile_birthday.f_input_v1(value='25/07/1985')
+                                                
+                                            .form_cell
+                                                label.f_label_v1.edit_icon(for='profile_email') email
+                                                .input_w: input#profile_email.f_input_v1(value='jessika85@gmail.com')
+
+                                            .form_cell
+                                                ul.sh_settings
+                                                    li: label.sh_check
+                                                        input.hidden_inp(type='checkbox')
+                                                        span.sh_img.sh_190: img(src='i/sh_fb.png')
+                                                        span.sh_toggle
+                                                    
+                                                    li: label.sh_check
+                                                        input.hidden_inp(type='checkbox')
+                                                        span.sh_img.sh_65: img(src='i/sh_vk.png')
+                                                        span.sh_toggle
+                                                    
+                                                    li: label.sh_check
+                                                        input.hidden_inp(type='checkbox')
+                                                        span.sh_img.sh_181: img(src='i/sh_tw.png')
+                                                        span.sh_toggle
+                                                    
+                                                    li: label.sh_check
+                                                        input.hidden_inp(type='checkbox')
+                                                        span.sh_img.sh_56: img(src='i/sh_gl.png')
+                                                        span.sh_toggle
+                                                    
+
+                                        .pr_edit_col.form_cell_v1
+                                            .form_cell
+                                                label.f_label_v1(for='profile_name') страна
+                                                .input_w
+                                                    .lang_switcher
+                                                        a.lang_link(href='#')
+                                                            img(src='i/flag_ukr.png')
+                                                        span.lang_val.drop_icon Украина
+                                                        ul.lang_list
+                                                            li
+                                                                a.lang_link(href='#')
+                                                                    img(src='i/flag_ukr.png')
+                                                                span.lang_val Украина
+                                                                
+                                                            li
+                                                                a.lang_link(href='#')
+                                                                    img(src='i/flag_ukr.png')
+                                                                span.lang_val Украина
+                                                                
+                                                            li
+                                                                a.lang_link(href='#')
+                                                                    img(src='i/flag_ukr.png')
+                                                                span.lang_val Украина
+                                                
+                                            .form_cell
+                                                label.f_label_v1(for='profile_pass') изменение пароля
+                                                .input_group
+                                                    .input_w.w_350: input#profile_pass.f_input_v2()
+                                                    .input_w: .f_input_tip - введите новый пароль
+                                                .input_group
+                                                    .input_w.w_350: input#profile_pass_2.f_input_v2
+                                                    .input_w: .f_input_tip - повторите ввод
+                                                .input_group
+                                                    .input_w.w_350
+                                                        button.btn_v1.red_btn.pr_save_btn: span сохранить
+                                                        
+                                            .form_cell.text_right
+                                                .pr_rm_block
+                                                    a.pr_rm_link.openRmDialog(href='#')
+                                                    p удалить аккаунт DIVIDE можно, если у вас  <br> нет активных сборов подарка
+
+                .other_gifts_block
+                    h3.other_gifts_caption ПОДАРКИ ДРУГИХ ПОЛЬЗОВАТЕЛЕЙ DIVIDE
+
+                    .other_gifts_slider
+                        .slider_holder.swiper_v2
+                            .swiper-controls
+                                #other_gift_next.swiper-button-next
+                                #other_gift_prev.swiper-button-prev
+                            .swiper-container.otherGiftSlider
+                                .swiper-wrapper.clearfix
+                                    +loop_while(5)
+                                        .swiper-slide
+                                            +gift_unit(true, 'gift_unit_v2')
+
+            .footer
+                .section_inner
+                    .footer_table
+                        .footer_cell
+                            a.footer_link(href='#') Публичная оферта
+                            a.footer_link(href='#') FAQ
+                            
+                        .footer_cell
+                            ul.f_sh_block
+                                li: a.sh_lnk.icon-facebook(href='#') 
+                                li: a.sh_lnk.icon-vk(href='#') 
+                                li: a.sh_lnk.icon-twitter(href='#') 
+                                li: a.sh_lnk.icon-google-plus(href='#') 
+                                li: a.sh_lnk.icon-at(href='#') 
+                                
+                            .copyright COPYRIGHT © 2016 Divide. ALL RIGHTS RESERVED
+                            
+                        .footer_cell
+                            a.footer_link(href='#') Язык: Русский
+                            
+        +popups()
+        

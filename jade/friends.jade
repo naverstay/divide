@@ -1,0 +1,88 @@
+include mixins
+doctype html
+html(lang='ru')
+    +dev_head('Divide друзья')
+
+    body.friends_page
+        .wrapper
+            .rect_1024
+            .base
+                div.header
+                    .section_inner.clearfix
+                        ul.main_menu
+                            li.menu_item
+                                a.menu_link(href='index.html')
+                                    span.link_text Как это работает?
+                            li.menu_item
+                                a.menu_link(href='partners.html')
+                                    span.link_text Партнерам
+                            li.menu_item
+                                a.menu_link.active(href='friends.html')
+                                    span.link_text Друзья Divide
+                            li.menu_item.menu_item_logo
+                                a.logo(href='#'): img(src='i/logo.png')
+                            li.menu_item.menu_item_right
+                                a.menu_link.wish_create_link(href='create.html')
+                                    span.wish_l_icon: img(src='i/wish_link.png')
+                                    span.link_text Создать желание
+                            li.menu_item.menu_item_right
+                                a.menu_link(href='divide.html')
+                                    span.link_text.profile_icon Вход DIVIDE
+    
+                        .lang_block: .lang_switcher
+                            a.lang_link(href='#'): img(src='i/flag_ukr.png')
+                            ul.lang_list
+                                li: a.lang_link(href='#'): img(src='i/flag_ukr.png')
+                                li: a.lang_link(href='#'): img(src='i/flag_ukr.png')
+                                li: a.lang_link(href='#'): img(src='i/flag_ukr.png')
+                                
+                .friends_holder
+                    .section
+                        .section_inner
+                            ul.fiends_List
+                                li: a.friend_unit(href='#'): img(src='i/friends/friend_1.png')
+                                li: a.friend_unit(href='#'): img(src='i/friends/friend_2.png')
+                                li: a.friend_unit(href='#'): img(src='i/friends/friend_3.png')
+                                li: a.friend_unit(href='#'): img(src='i/friends/friend_4.png')
+                                li: a.friend_unit(href='#'): img(src='i/friends/friend_5.png')
+                                |  <br> 
+                                li: a.friend_unit(href='#'): img(src='i/friends/friend_6.png')
+                                li: a.friend_unit(href='#'): img(src='i/friends/friend_7.png')
+                                li: a.friend_unit(href='#'): img(src='i/friends/friend_8.png')
+                                li: a.friend_unit(href='#'): img(src='i/friends/friend_9.png')
+                                |  <br> 
+                                li: a.friend_unit(href='#'): img(src='i/friends/friend_10.png')
+                                li: a.friend_unit(href='#'): img(src='i/friends/friend_11.png')
+                                li: a.friend_unit(href='#'): img(src='i/friends/friend_12.png')
+                                li: a.friend_unit(href='#'): img(src='i/friends/friend_13.png')
+                                li: a.friend_unit(href='#'): img(src='i/friends/friend_14.png')
+                            
+            .footer
+                .section_inner
+                    .footer_table
+                        .footer_cell
+                            a.footer_link(href='#') Публичная оферта
+                            a.footer_link(href='#') FAQ
+                            
+                        .footer_cell
+                            ul.f_sh_block
+                                li: a.sh_lnk.icon-facebook(href='#') 
+                                li: a.sh_lnk.icon-vk(href='#') 
+                                li: a.sh_lnk.icon-twitter(href='#') 
+                                li: a.sh_lnk.icon-google-plus(href='#') 
+                                li: a.sh_lnk.icon-at(href='#') 
+                                
+                            .copyright COPYRIGHT © 2016 Divide. ALL RIGHTS RESERVED
+                            
+                        .footer_cell
+                            a.footer_link(href='#') Язык: Русский
+                            
+            .decorations_block
+                .the_sun
+                .left_hill
+                    img(src='i/hills_1.png')
+                .right_hill
+                    img(src='i/hills_2.png')
+                                        
+        //+popups()
+        

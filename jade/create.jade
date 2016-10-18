@@ -1,0 +1,133 @@
+include mixins
+doctype html
+html(lang='ru')
+    +dev_head('Divide создать', false, false, false, true)
+
+    body.create_page
+        .wrapper
+            .rect_1024
+            .base
+                div.header
+                    .section_inner.clearfix
+                        ul.main_menu
+                            li.menu_item
+                                a.menu_link(href='index.html')
+                                    span.link_text Как это работает?
+                            li.menu_item
+                                a.menu_link(href='partners.html')
+                                    span.link_text Партнерам
+                            li.menu_item
+                                a.menu_link(href='friends.html')
+                                    span.link_text Друзья Divide
+                            li.menu_item.menu_item_logo
+                                a.logo(href='#'): img(src='i/logo.png')
+                            li.menu_item.menu_item_right
+                                a.menu_link.active.wish_create_link(href='create.html')
+                                    span.wish_l_icon: img(src='i/wish_link.png')
+                                    span.link_text Создать желание
+                            li.menu_item.menu_item_right
+                                a.menu_link(href='divide.html')
+                                    span.link_text.profile_icon Вход DIVIDE
+    
+                        .lang_block: .lang_switcher
+                            a.lang_link(href='#'): img(src='i/flag_ukr.png')
+                            ul.lang_list
+                                li: a.lang_link(href='#'): img(src='i/flag_ukr.png')
+                                li: a.lang_link(href='#'): img(src='i/flag_ukr.png')
+                                li: a.lang_link(href='#'): img(src='i/flag_ukr.png')
+                                
+                .create_form_holder
+                    .section.create_controls_holder
+                        .section_inner
+                            .section_table
+                                .form_block: form(action='#'): .tabBlock(data-tab-context='#create_tab_list')
+                                    #create_tab_1: .tab_unit
+                                        ul.create_toggle_holder
+                                            li
+                                                label.create_check
+                                                    input.hidden_inp(type='radio' name='create_for' checked)
+                                                    span.check_text ДЛЯ МЕНЯ
+                                            li
+                                                label.create_check
+                                                    input.hidden_inp(type='radio' name='create_for')
+                                                    span.check_text ДЛЯ ДРУГА
+            
+                                        .create_form_cell
+                                            label(for='create_event') По какому случаю?
+                                            .input_w: input#create_event.f_input_v4
+                                            
+                                        .create_form_cell
+                                            label(for='present_name') Введите название подарка или вставьте ссылку
+                                            .input_w: input#present_name.f_input_v4
+                                            
+                                        .create_form_cell_v2
+                                            label(for='present_price') Цена
+                                            .input_w: input#present_price.f_input_v4
+                                            span ₴
+                                        
+                                        .create_form_cell_v3
+                                            label.input_w.calendar_holder: input#create_event_date.f_input_v5(placeholder='Дата события')
+                                            
+                                    #create_tab_2: .tab_unit: .create_event_info
+                                        .create_form_cell
+                                            label(for='create_event_photos') Добавьте фотографии вашего желания:
+                                            .input_w.photos_catcher: textarea#create_event_photos.f_ta_v1
+                                            
+                                        .create_form_cell
+                                            label(for='create_event_description') Добавьте описание:
+                                            .input_w: textarea#create_event_description.f_ta_v2
+                                            
+                                            
+                                    #create_tab_3: .tab_unit 
+                                        .create_title РАССКАЖИ ДРУЗЬЯМ!
+                                            
+                                        .create_sh_block: ul.f_sh_block
+                                            li: a.sh_lnk.icon-facebook(href='#')
+                                            li: a.sh_lnk.icon-vk(href='#')
+                                            li: a.sh_lnk.icon-twitter(href='#')
+                                            li: a.sh_lnk.icon-google-plus(href='#')
+                            
+                                        .create_tip
+                                            p Если ты ранее не был зарегистрирован в DIVIDE, мы автоматически создадим тебе аккаунт!
+                                            
+                        .create_controls.createControls(data-step=0)
+                            .create_steps_holder
+                                ul.create_nav
+                                    li: a.create_nav_btn.nav_btn_prev.createTabPrev(href='#')
+                                    li: a.create_nav_btn.nav_btn_next.createTabNext(href='#')
+                                    li: a.create_nav_btn.nav_btn_view(href='#')
+                                
+                                ul#create_tab_list.create_steps
+                                    li: a.create_step_link(href='#create_tab_1')
+                                    li: a.create_step_link(href='#create_tab_2')
+                                    li: a.create_step_link(href='#create_tab_3')
+
+            .footer
+                .section_inner
+                    .footer_table
+                        .footer_cell
+                            a.footer_link(href='#') Публичная оферта
+                            a.footer_link(href='#') FAQ
+                            
+                        .footer_cell
+                            ul.f_sh_block
+                                li: a.sh_lnk.icon-facebook(href='#') 
+                                li: a.sh_lnk.icon-vk(href='#') 
+                                li: a.sh_lnk.icon-twitter(href='#') 
+                                li: a.sh_lnk.icon-google-plus(href='#') 
+                                li: a.sh_lnk.icon-at(href='#') 
+                                
+                            .copyright COPYRIGHT © 2016 Divide. ALL RIGHTS RESERVED
+                            
+                        .footer_cell
+                            a.footer_link(href='#') Язык: Русский
+                            
+            .decorations_block
+                .left_hill
+                    img(src='i/hills_1.png')
+                .right_hill
+                    img(src='i/hills_2.png')
+                    
+                    
+        //+popups()
+        

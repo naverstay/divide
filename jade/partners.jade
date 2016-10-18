@@ -1,0 +1,150 @@
+include mixins
+doctype html
+html(lang='ru')
+    +dev_head('Divide партнерам', false, false, true)
+
+    body.partner_page
+        .wrapper
+            .rect_1024
+            .base
+                div.header
+                    .section_inner.clearfix
+                        ul.main_menu
+                            li.menu_item
+                                a.menu_link(href='index.html')
+                                    span.link_text Как это работает?
+                            li.menu_item
+                                a.menu_link.active(href='partners.html')
+                                    span.link_text Партнерам
+                            li.menu_item
+                                a.menu_link(href='friends.html')
+                                    span.link_text Друзья Divide
+                            li.menu_item.menu_item_logo
+                                a.logo(href='#'): img(src='i/logo.png')
+                            li.menu_item.menu_item_right
+                                a.menu_link.wish_create_link(href='create.html')
+                                    span.wish_l_icon: img(src='i/wish_link.png')
+                                    span.link_text Создать желание
+                            li.menu_item.menu_item_right
+                                a.menu_link(href='divide.html')
+                                    span.link_text.profile_icon Вход DIVIDE
+    
+                        .lang_block: .lang_switcher
+                            a.lang_link(href='#'): img(src='i/flag_ukr.png')
+                            ul.lang_list
+                                li: a.lang_link(href='#'): img(src='i/flag_ukr.png')
+                                li: a.lang_link(href='#'): img(src='i/flag_ukr.png')
+                                li: a.lang_link(href='#'): img(src='i/flag_ukr.png')
+                                
+                #fullpage.fullpage-wrapper
+                    .section
+                        .partner_store: img(src='i/partners/partners_bg.png')
+
+                        .section_inner: .section_table
+                            .wish_b_caption.text_center Размести кнопку “DIVIDE" в своем магазине
+
+                    .section
+                        .section_inner: .section_table
+                            .wish_b_caption.text_center Привлекай больше клиентов и  <br> трафик из социальных сетей
+                                
+                            .partner_party_block
+                                .partner_unit.partner_unit_1
+                                    .partner_gift: img(src='i/partners/partner_gift.png')
+                                    .partner_hands: img(src='i/partners/partner_hands_1.png')
+                                .partner_unit.partner_unit_2
+                                    .partner_gift: img(src='i/partners/partner_gift.png')
+                                    .partner_hands: img(src='i/partners/partner_hands_2.png')
+                                .partner_unit.partner_unit_3
+                                    .partner_gift: img(src='i/partners/partner_gift.png')
+                                    .partner_hands: img(src='i/partners/partner_hands_3.png')
+                                .partner_unit.partner_unit_4
+                                    .partner_gift: img(src='i/partners/partner_gift.png')
+                                    .partner_hands: img(src='i/partners/partner_hands_4.png')
+                                .partner_unit.partner_unit_5
+                                    .partner_gift: img(src='i/partners/partner_gift.png')
+                                    .partner_hands: img(src='i/partners/partner_hands_5.png')
+                            
+                    .section
+                        .section_inner
+                            .section_table
+                                .wish_b_caption.text_center Коллективный подарок дороже, <br> чем индивидуальный
+                                
+                                .collective_present_block
+                                    .collective_present
+                                        img(src='i/partners/collective_present.jpg')
+                            
+            .footer
+                .section_inner
+                    .footer_table
+                        .footer_cell
+                            a.footer_link(href='#') Публичная оферта
+                            a.footer_link(href='#') FAQ
+                            
+                        .footer_cell
+                            ul.f_sh_block
+                                li: a.sh_lnk.icon-facebook(href='#') 
+                                li: a.sh_lnk.icon-vk(href='#') 
+                                li: a.sh_lnk.icon-twitter(href='#') 
+                                li: a.sh_lnk.icon-google-plus(href='#') 
+                                li: a.sh_lnk.icon-at(href='#') 
+                                
+                            .copyright COPYRIGHT © 2016 Divide. ALL RIGHTS RESERVED
+                            
+                        .footer_cell
+                            a.footer_link(href='#') Язык: Русский
+                            
+            .decorations_block
+                .partner_catch_block
+                    a.partner_btn(href='#')
+                        img(src='i/partners/partners_btn.png')
+                        .partner_hand: img(src='i/partners/partner_hand.png')
+                #presentsBlock.presents_block: .section_inner
+                    .present_unit.present_unit_1: img(src='i/partners/small_present.jpg')
+                    .present_unit.present_unit_2: img(src='i/partners/small_present.jpg')
+                    .present_unit.present_unit_3: img(src='i/partners/small_present.jpg')
+                    .present_unit.present_unit_4: img(src='i/partners/small_present.jpg')
+                    .present_unit.present_unit_5: img(src='i/partners/small_present.jpg')
+                    .present_unit.present_unit_6: img(src='i/partners/small_present.jpg')
+                    .present_unit.present_unit_7: img(src='i/partners/small_present.jpg')
+                    .present_unit.present_unit_8: img(src='i/partners/small_present.jpg')
+                
+            .guy_holder: .section_inner
+                .guy_animation_block
+                    .guy_block
+                        //-.clouds
+                            //-img(src='i/how/clouds.png')
+                            .cloud_1
+                                img(src='i/how/cloud_1.png')
+                            .cloud_2
+                                img(src='i/how/cloud_2.png')
+                            .cloud_3
+                                img(src='i/how/cloud_3.png')
+                            .cloud_4
+                                img(src='i/how/cloud_4.png')
+                            .cloud_5
+                                img(src='i/how/cloud_5.png')
+                            .cloud_gift
+                                img(src='i/how/cloud_gift.png')
+    
+                        .guy
+                            .collective_present
+                                img(src='i/partners/collective_present.jpg')
+                            //-.guy_shadow
+                                img(src='i/how/guy_shadow.png')
+                            //-img.guy_img(src='i/how/guy.png')
+                            //-img.guy_rupor_img(src='i/how/guy_rupor.png')
+                            img.guy_happy_img(src='i/how/guy_happy.png')
+                            .guy_eyes: img.guy_eyes_img(src='i/how/guy_eyes.png')
+                            .guy_rupor_soc
+                                a.rupor_soc_link.icon-mail-envelope-closed(href='#')
+                                a.rupor_soc_link.icon-facebook(href='#')
+                                a.rupor_soc_link.icon-vk(href='#')
+                                a.rupor_soc_link.icon-twitter(href='#')
+
+            .partner_button_holder
+                a.create_wish_btn(href='create.html')
+                    .create_wish_icon: img(src='i/fav_gift_icon.png')
+                    span ПОДКЛЮЧИТЬСЯ
+                    
+        //+popups()
+        
